@@ -1,0 +1,50 @@
+body {
+	/*	background-image: url(https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwixtrr4mvHlAhXRJVAKHWfqAOwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.floridarehab.com%2Fdrugs%2Fcocaine%2F&psig=AOvVaw0bBmG26R9nrUpCQjbFZ9CK&ust=1574078885509015);*/
+	font-family: 'Odibee Sans', sans-serif;
+}
+
+#t1 {
+	color: blue;
+}
+
+#t2 {
+	color: red;
+	font-family: monospace;
+	font-size: 20px;
+}
+
+#t3 {
+	color: rgb(100, 5, 190);
+	font-family: sans-serif;
+}
+
+#t4 {
+	/*a = alpha (vividitatea culorii)*/
+	color: rgba(100, 5, 190, 0.6);
+}
+
+#t5 {
+	color: #663399;
+	font-family: cursive;
+}
+
+#t6 {
+	color: #663399aa;
+	font-family: fantasy;
+}
+
+#t7 {
+	color: #f07200;
+}
+
+#t8 {
+	color: #aabbcc;
+}
+
+#t9 {
+	color: #aabbccdd;
+}
+
+h1 {
+	text-decoration: underline;
+}

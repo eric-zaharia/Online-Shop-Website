@@ -3,33 +3,36 @@
     width: 600px;
     font-size: 14pt;
     border-width: 6px;
-    border-color: yellow;
+    border-color: orange;
     border-style: solid;
+ 	background-color: grey;
 }
 
 #ta {
 	height: 100px;
 	width: 300px;
 	font-size: 14pt;
+	background-color: grey;
 }
 
 #li1 {
-	color: blue;
+	color: orange;
 	text-decoration: overline;
 }
 
 .plm {
+	color: white;
 	width: 610px;
 	height: 300px;
-	border-color: green;
+	border-color: orange;
 	border-width: 7px;
 	border-style: solid;
-	background-color: yellow;
+	background-color: black;
 
 }
 
 .bg {
-	background-color: yellow;
+	background-color: orange;
 	width: 600px;
 }
 
@@ -46,7 +49,7 @@ th {
 }
 
 body {
-	background-color: deeppink;
+	background-color: black;
 }
 
 #cssTable td 
@@ -56,12 +59,12 @@ body {
 }
 
 h2 {
-	color: blue;
+	color: white;
 }
 
 h1 {
 	width: 600px;
-    color: aqua;
+    color: orange;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     box-sizing: border-box;
     border: 1px solid black;
@@ -69,9 +72,9 @@ h1 {
 
 .plm2 {
 	box-sizing: border-box;
-    border: 5px dashed blue;
+    border: 5px orange;
     width: 610px;
-    background-color: aqua;
+    background-color: black;
 }
 
 a {
@@ -85,5 +88,21 @@ a:hover {
 
 a:visited {
 	color: yellow;
+}
+
+p, text {
+	color: white;
+}
+
+ol {
+	color: white;
+}
+
+label {
+	color: white;
+}
+
+h2 {
+	color: orange;
 }
 
