@@ -1,0 +1,90 @@
+body {
+	background-color: #E8EDDF;
+}
+
+.bg-verde {
+	background-color: #14C6A4;
+}
+
+#pgntn {
+	margin-bottom: 2em;
+}
+
+footer {
+	background-color: #14C6A4;
+}
+
+.icon {
+	color: black;
+}
+
+.pagination > li > a
+{
+    background-color: white;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #14C6A4 !important;
+    border: solid 1px #14C6A4 !important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #14C6A4 !important;
+    border: solid 1px #14C6A4;
+}
+
+.stiri {
+	background-color: #CFDBD5;
+	color: black;
+	border-radius: 25px;
+}
+
+.pgstiri {
+	margin-bottom: 4em;
+}
+
+img {
+	width: 300px;
+}
+
+#liviu {
+	width: 400px;
+} 
+
+a {
+	color: black;
+}
+
+#jumboabout {
+	background-color: white;
+	height: 506px;
+	border: solid black 1px;
+}
+
+#secondipsum {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#jumbocontact {
+	background-color: white;
+	border: solid black 1px;
+	height: 400px;
+}
+
+#zdreanta {
+	height: 600px;
+}
