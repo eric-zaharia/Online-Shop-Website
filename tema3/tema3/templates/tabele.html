@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en"  class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <title>Tabele</title>
+</head>
+<body class="h-100 d-flex flex-column">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-grey fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'my_app:tabele' %}">Home</a>
+                </li>
+              </ul>
+
+            </div>
+          </nav>
+        <br><br><br><br>
+
+        <div class="container">
+            <div class="card-deck">
+                {% for post in posts %}
+                <div class="card col">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ post.titlu }} <span class="badge badge-secondary">New</span></h4>
+                        <p>{{ post.autor }}</p>
+                        <hr>
+                      <pre><span class="inner-pre" style="font-size: 13px">{{ post.continut }}</span></pre>
+                      <p class="card-text"><small class="text-muted">{{ post.data_p }}</small></p>
+                        <hr>
+                        <h4>Comments: </h4>
+                        {% for comment in post.comments.all %}
+                                <p id="dataoracom"><small id="usercom">{{ comment.nume_cont }}: </small>{{ comment.continut }}</p>
+                                <p><small class="text-muted">{{ comment.data_ora }}</small></p>
+                        {% empty %}
+                                <p class="text-muted">There are no comments.</p>
+                        {% endfor %}
+                      <form method="post">
+                          {% csrf_token %}
+                          <input type="text" placeholder="Add a comment" id="comtxt" name="continut_com">     <input type="text" placeholder="Your name" id="comtxt2" name="nume_cont"><br>
+                          <input hidden type="text" name="tipform" value="comment">
+                          <input hidden type="text" name="post" value="{{ post.id }}">
+                          <button type="submit" class="btn btn-primary">Submit comment</button>
+                      </form>
+                    </div>
+                 </div>
+                    </div><br><br><div class="card-deck">
+                {% empty %}
+                    <h2 class="text-muted">There are no posts.</h2>
+                {% endfor %}
+            </div>
+
+        </div>
+
+        <br><br>
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Create a post:</h2>
+                <hr>
+              <form method="post">
+                {% csrf_token %}
+                <label for="titlu">
+                    Titlu:
+                    <input id="titlu" name="titlu" type="text">
+                </label><br>
+                <label for="autor">
+                    Autor:
+                    <input id="autor" name="autor" type="text">
+                </label><br>
+                <label for="continut">
+                    Continut:
+                    <textarea id="continut" name="continut" type="text"></textarea>
+                </label><br>
+                <input hidden type="text" name="tipform" value="post">
+                <input class="btn btn-primary" type="submit">
+            </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

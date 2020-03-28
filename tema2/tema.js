@@ -25,16 +25,14 @@ function rand() {
 
 function checkTurn() {
 	document.getElementById('trei').disabled = true;
-    document.getElementById('trei').value = "Please wait...";
     return true;
 }
 
 function resetTurn() {
     document.getElementById('trei').disabled = false;
-    document.getElementById('trei').value = "Submit";
   }
 
-var positions = [8];
+var positions = [];
 positions[0] = document.getElementById('one');
 positions[1] = document.getElementById('two');
 positions[2] = document.getElementById('three');

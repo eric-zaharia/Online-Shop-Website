@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+{% load myfilter %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Bine ati venit pe blogul meu!</h1>
+    <br>
+    <p>Introduce-ti datele</p>
+    <textarea name="txtarea" cols="30" rows="10"></textarea>
+    <a href="{% url 'my_app:tabele' %}">Catre tabele -></a>
+    <p>{{ nr | add:'100' }}</p>
+    <p>{{ nr | even_no_count }}</p>
+</body>
+</html>
