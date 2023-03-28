@@ -1,5 +1,2 @@
-# wdm-ez
-web development MASTERCLASS course assignment
-
-
-test
+# Online Shop Website
+Developed website using HTML, CSS and the Django Framework
